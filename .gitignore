@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation excessive (on garde uniquement README.md)
+INSTRUCTIONS.md
+PROJET_COMPLET.md
+STRUCTURE.md
+SYNTHESE_CREATION.md
+INDEX.txt
+code/QUICKSTART.md
+
+# Documentation détaillée (trop verbeux pour GitHub)
+docs/HYPOTHESES_ET_METHODOLOGIE.md
+docs/LIVRABLES.md
+
+# Scripts setup (on garde le Makefile qui suffit)
+code/setup_and_run.sh

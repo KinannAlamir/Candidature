@@ -1,0 +1,327 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% Couleurs personnalisées
+\definecolor{wedRBlue}{RGB}{0, 102, 204}
+\definecolor{wedRGreen}{RGB}{0, 153, 76}
+\definecolor{wedRGray}{RGB}{100, 100, 100}
+
+\setbeamercolor{structure}{fg=wedRBlue}
+\setbeamercolor{frametitle}{bg=wedRBlue, fg=white}
+
+\title[Cadrage Data Science - Banque]{Cadrage d'un Cas d'Usage Data Science}
+\subtitle{Prédiction des Moments de Vie - Banque Française}
+\author{Consultant Data Science}
+\date{Novembre 2025}
+\institute{Mission de 6 semaines}
+
+\begin{document}
+
+% ============================================================
+% SLIDE 1: PAGE DE TITRE
+% ============================================================
+\begin{frame}
+\titlepage
+\end{frame}
+
+% ============================================================
+% SLIDE 2: DÉMARCHE DE CADRAGE - VUE D'ENSEMBLE
+% ============================================================
+\begin{frame}{Démarche de Cadrage - Vue d'Ensemble}
+
+\begin{block}{Objectif}
+Cadrer un projet de prédiction des moments de vie clients pour une banque française sur une période de \textbf{6 semaines}.
+\end{block}
+
+\vspace{0.3cm}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{\textcolor{wedRBlue}{Phase 1: Compréhension (S1-S2)}}
+\begin{itemize}
+    \item Analyse du contexte métier
+    \item Identification des use cases
+    \item Audit des données disponibles
+    \item Définition des KPIs
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{\textcolor{wedRGreen}{Phase 2: Structuration (S3-S4)}}
+\begin{itemize}
+    \item Architecture technique
+    \item Roadmap détaillée
+    \item Estimation des ressources
+    \item Plan de gouvernance
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.3cm}
+
+\begin{center}
+\textbf{\textcolor{wedRGray}{Phase 3: Validation \& Pilote (S5-S6)}}\\
+POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
+\end{center}
+
+\end{frame}
+
+% ============================================================
+% SLIDE 3: PHASE 1 - COMPRÉHENSION MÉTIER
+% ============================================================
+\begin{frame}{Phase 1: Compréhension Métier (Semaines 1-2)}
+
+\textbf{\large Activités Clés}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item \textbf{Ateliers métier} (3-4 sessions)
+    \begin{itemize}
+        \item Directions: Marketing, Retail, Gestion de Patrimoine, Crédits
+        \item Identification des 8 moments de vie prioritaires
+        \item Compréhension des parcours clients actuels
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{Audit des données} (1 semaine)
+    \begin{itemize}
+        \item Données CRM, transactionnelles, comportementales, externes
+        \item Évaluation de la qualité et complétude (scoring RGPD)
+        \item Identification des gaps et enrichissements nécessaires
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{Définition des objectifs quantifiables}
+    \begin{itemize}
+        \item KPIs: Précision, Recall, F1-Score, Lift vs. baseline
+        \item Horizon de prédiction: 3-6-12 mois
+        \item ROI attendu: taux de conversion, satisfaction client
+    \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+% ============================================================
+% SLIDE 4: MOMENTS DE VIE & HYPOTHÈSES
+% ============================================================
+\begin{frame}{Moments de Vie Identifiés \& Hypothèses de Travail}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{\textcolor{wedRBlue}{8 Moments de Vie Prioritaires}}
+\begin{enumerate}
+    \item Mariage / PACS
+    \item Naissance / Adoption
+    \item Achat immobilier
+    \item Changement d'emploi
+    \item Retraite
+    \item Décès d'un proche
+    \item Divorce / Séparation
+    \item Création d'entreprise
+\end{enumerate}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{\textcolor{wedRGreen}{Hypothèses Clés}}
+\begin{itemize}
+    \item \textbf{H1:} Signaux comportementaux 3-6 mois avant l'événement
+    \item \textbf{H2:} Données transactionnelles + CRM suffisantes
+    \item \textbf{H3:} Précision >70\% pour top 3 événements
+    \item \textbf{H4:} ROI positif avec 15\% de conversion
+    \item \textbf{H5:} Conformité RGPD totale
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.4cm}
+
+\begin{block}{Dataset Synthétique Créé}
+\textbf{10,000 clients} - 40+ features (démographiques, financières, comportementales) - Horizon 12 mois
+\end{block}
+
+\end{frame}
+
+% ============================================================
+% SLIDE 5: PHASE 2 - ARCHITECTURE & ROADMAP
+% ============================================================
+\begin{frame}{Phase 2: Architecture Technique \& Roadmap (S3-S4)}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{\large Architecture Proposée}
+
+\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+% Data Sources
+\node[draw, rectangle, fill=wedRBlue!20, text width=3cm, align=center] at (0,4) {\textbf{Sources}\\CRM, Transactions\\Comportements};
+
+% Data Lake
+\node[draw, rectangle, fill=wedRGreen!20, text width=3cm, align=center] at (0,2.5) {\textbf{Data Lake}\\Azure/AWS\\RGPD-compliant};
+
+% ML Pipeline
+\node[draw, rectangle, fill=wedRBlue!20, text width=3cm, align=center] at (0,1) {\textbf{ML Pipeline}\\Feature Engineering\\Training/Scoring};
+
+% Activation
+\node[draw, rectangle, fill=wedRGreen!20, text width=3cm, align=center] at (0,-0.5) {\textbf{Activation}\\CRM, Conseillers\\Campagnes};
+
+% Arrows
+\draw[->, thick] (0,3.6) -- (0,3.0);
+\draw[->, thick] (0,2.0) -- (0,1.5);
+\draw[->, thick] (0,0.5) -- (0,0);
+\end{tikzpicture}
+
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{\large Roadmap Détaillée}
+
+\vspace{0.2cm}
+
+\textbf{S3: Architecture \& Features}
+\begin{itemize}
+    \item Design technique détaillé
+    \item Feature engineering (100+ features)
+    \item Sélection des algorithmes
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{S4: Développement POC}
+\begin{itemize}
+    \item Pipeline data (Airflow/Databricks)
+    \item Modèles ML (XGBoost, LightGBM)
+    \item Dashboard de monitoring
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Ressources Nécessaires}
+\begin{itemize}
+    \item 2 Data Scientists
+    \item 1 Data Engineer
+    \item 1 Product Owner métier
+\end{itemize}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% ============================================================
+% SLIDE 6: LIVRABLES & NEXT STEPS
+% ============================================================
+\begin{frame}{Livrables \& Prochaines Étapes}
+
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{\large Livrables (6 semaines)}
+
+\vspace{0.2cm}
+
+\begin{enumerate}
+    \item \textbf{Document de cadrage} (S2)
+    \begin{itemize}
+        \item Use cases détaillés
+        \item Cartographie des données
+        \item KPIs et métriques
+    \end{itemize}
+    
+    \item \textbf{Architecture technique} (S4)
+    \begin{itemize}
+        \item Schémas d'architecture
+        \item Roadmap détaillée
+        \item Budget \& timeline
+    \end{itemize}
+    
+    \item \textbf{POC fonctionnel} (S6)
+    \begin{itemize}
+        \item Code source (GitHub)
+        \item Modèles entraînés
+        \item Dashboard de résultats
+    \end{itemize}
+    
+    \item \textbf{Recommandations stratégiques}
+    \begin{itemize}
+        \item Plan de déploiement
+        \item Quick wins identifiés
+        \item Gouvernance \& éthique IA
+    \end{itemize}
+\end{enumerate}
+
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{\large Quick Wins Identifiés}
+
+\vspace{0.2cm}
+
+\begin{block}{Top 3 Use Cases}
+\begin{enumerate}
+    \item \textbf{Achat immobilier} (ROI: +25\%)
+    \begin{itemize}
+        \item Simulations de prêt
+        \item Augmentation épargne
+    \end{itemize}
+    
+    \item \textbf{Naissance} (ROI: +18\%)
+    \begin{itemize}
+        \item Ouverture comptes enfants
+        \item Assurances vie
+    \end{itemize}
+    
+    \item \textbf{Retraite} (ROI: +22\%)
+    \begin{itemize}
+        \item Consultations placements
+        \item Visites agence
+    \end{itemize}
+\end{enumerate}
+\end{block}
+
+\vspace{0.3cm}
+
+\textbf{\textcolor{wedRBlue}{Success Metrics}}
+\begin{itemize}
+    \item Précision modèle: >70\%
+    \item Taux conversion: +15-25\%
+    \item Satisfaction client: +10pts
+\end{itemize}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% ============================================================
+% SLIDE FINALE: REMERCIEMENTS
+% ============================================================
+\begin{frame}[plain]
+\begin{center}
+\vspace{1.5cm}
+{\Huge \textcolor{wedRBlue}{\textbf{Merci}}}
+
+\vspace{0.5cm}
+
+{\Large Questions \& Échanges}
+
+\vspace{1cm}
+
+\textit{Dataset synthétique \& code disponibles}\\
+\texttt{github.com/case\_study\_banque}
+
+\vspace{0.5cm}
+
+\textcolor{wedRGray}{Mission de cadrage - 6 semaines}\\
+\textcolor{wedRGray}{Prédiction des moments de vie clients}
+\end{center}
+\end{frame}
+
+\end{document}
