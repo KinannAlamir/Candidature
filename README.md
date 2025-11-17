@@ -18,9 +18,10 @@
 - Comment structurer une mission de 6 semaines ?
 
 **Livrables :**
-✅ **Présentation de cadrage** : 6 slides LaTeX/Beamer  
-✅ **Démarche méthodologique** : 3 phases structurées  
-✅ **POC technique** : Dataset 100% synthétique + prototype ML  
+
+**Présentation de cadrage** : 6 slides LaTeX/Beamer  
+**Démarche méthodologique** : 3 phases structurées  
+**POC technique** : Dataset 100% synthétique + prototype ML  
 
 ---
 
