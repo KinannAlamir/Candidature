@@ -66,10 +66,6 @@
 - Hypothèses de travail documentées
 - ROI estimé sur top 3 use cases
 
-\`\`\`bash
-make presentation  # Compiler la présentation
-\`\`\`
-
 ### 2. POC Technique (Illustration)
 💻 **Dataset 100% synthétique** pour démonstration :
 - 10,000 clients fictifs générés
@@ -77,29 +73,8 @@ make presentation  # Compiler la présentation
 - 8 moments de vie simulés
 - Prototype ML baseline (F1-score ~70%)
 
-\`\`\`bash
-make all  # Génère données + analyse + présentation (~2min)
-\`\`\`
 
 > **Important :** Le code et les données sont purement illustratifs pour valider la faisabilité technique. Aucune donnée réelle utilisée.
-
----
-
-## 🗂️ Structure du Projet
-
-\`\`\`
-📂 case_study_banque/
-├── 📊 presentation/
-│   ├── presentation_cadrage.tex    # Source LaTeX (6 slides)
-│   └── presentation_cadrage.pdf    # Livrable principal
-├── 💻 code/
-│   ├── generate_dataset.py         # Génération données synthétiques
-│   ├── analyse_exploratoire.py     # Prototype ML
-│   └── requirements.txt
-└── 📊 data/
-    ├── clients_data.csv            # 10K clients fictifs
-    └── feature_importance.csv      # Résultats modèle
-\`\`\`
 
 ---
 
