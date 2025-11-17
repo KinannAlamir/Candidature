@@ -126,34 +126,6 @@
 
 ---
 
-## � Présentation Exécutive
-
-**Format :** 6 slides LaTeX/Beamer (selon cahier des charges)
-
-### Contenu des Slides
-
-1. **🎯 Démarche de cadrage** - Vue d'ensemble (3 phases, 6 semaines)
-2. **🔍 Phase 1** - Compréhension métier (ateliers, audit données)
-3. **💡 Moments de vie** - 8 événements identifiés + hypothèses métier
-4. **🏗️ Architecture** - Design technique + roadmap 12 mois
-5. **📦 Livrables** - 5 catégories + quick wins
-6. **💰 ROI** - Top 3 use cases (ROI 18-25%)
-
-**Hypothèses de travail intégrées :**
-- Corrélations comportementales fortes 2-6 mois avant événements
-- Données CRM + transactionnelles suffisantes pour prédiction
-- Acceptabilité client pour offres anticipées personnalisées
-- Capacité d'absorption métier pour déploiement graduel
-
-Pour compiler la présentation :
-```bash
-make presentation
-# ou
-cd presentation && pdflatex presentation_cadrage.tex
-```
-
----
-
 ## 💻 Implémentation Technique
 
 > **Note importante :** L'implémentation technique ci-dessous sert d'**illustration concrète** des concepts de cadrage. L'objectif principal reste le cadrage méthodologique, pas le développement technique.
