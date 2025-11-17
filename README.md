@@ -239,49 +239,6 @@ case_study_banque/
 
 ---
 
-## � Présentation
-
-Le dossier `presentation/` contient une présentation LaTeX/Beamer de 6 slides :
-
-1. **Démarche de cadrage** - Vue d'ensemble (3 phases, 6 semaines)
-2. **Phase 1** - Compréhension métier (ateliers, audit données)
-3. **Moments de vie** - 8 événements identifiés + hypothèses
-4. **Architecture** - Design technique + roadmap 12 mois
-5. **Livrables** - 5 catégories + quick wins
-6. **ROI** - Top 3 use cases (ROI 18-25%)
-
-Pour compiler :
-
-```bash
-make presentation
-# ou
-cd presentation && pdflatex presentation_cadrage.tex
-```
-
----
-
-## 🎯 Démarche de Cadrage (6 Semaines)
-
-### Phase 1: Compréhension (S1-S2)
-- Ateliers métier (Marketing, Retail, Crédits)
-- Audit données (CRM, transactions, comportements)
-- Identification 8 moments de vie prioritaires
-- Définition KPIs
-
-### Phase 2: Structuration (S3-S4)
-- Architecture technique (5 couches)
-- Feature engineering (100+ features)
-- Sélection algorithmes ML
-- Roadmap déploiement 12 mois
-
-### Phase 3: POC & Validation (S5-S6)
-- POC sur 1-2 moments de vie
-- Tests et validation modèles
-- Dashboard monitoring
-- Présentation sponsors
-
----
-
 ## 💰 ROI et Quick Wins
 
 ### Top 3 Use Cases
@@ -294,28 +251,3 @@ cd presentation && pdflatex presentation_cadrage.tex
 
 **Impact total estimé :** 1,100 clients ciblés/mois → €300-500K revenus additionnels/mois
 
----
-
-## �️ Technologies
-
-- **Python 3.8+** : pandas, numpy, scikit-learn, matplotlib
-- **LaTeX/Beamer** : Présentation professionnelle
-- **Makefile** : Automatisation des tâches
-
----
-
-## 📄 License
-
-MIT License - Projet éducatif et de démonstration.
-
-**Note :** Les données sont entièrement synthétiques.
-
----
-
-## ✨ Auteur
-
-Cas d'étude créé pour une mission de cadrage data science - Novembre 2025
-
----
-
-**� Prêt à commencer ?** `make all`
