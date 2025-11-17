@@ -6,16 +6,21 @@
 
 **Mission de cadrage data science** pour la prédiction des moments de vie des clients d'une banque française.
 
-> **Objectif principal :** Développer une démarche de cadrage structurée pour un cas d'usage data science, avec livrables méthodologiques et présentation exécutive.
+> **Objectif :** Développer une démarche de cadrage structurée sur 6 semaines avec présentation exécutive (6 slides) + POC technique synthétique pour illustration.
 
-## 📋 Table des Matières
+## 🎯 Mission de Cadrage | 📊 Présentation | 💻 POC Synthétique
 
-- [Mission de Cadrage](#-mission-de-cadrage)
-- [Démarche Méthodologique](#-démarche-méthodologique)
-- [Livrables](#-livrables)
-- [Présentation Exécutive](#-présentation-exécutive)
-- [Implémentation Technique](#-implémentation-technique)
-- [Structure du Projet](#structure-du-projet)
+**Contexte :** Sollicitation pour intervenir sur le cadrage d'un cas d'usage data science visant à prédire des moments de vie des clients d'une banque française.
+
+**Questions centrales :**
+- Quelle démarche de cadrage mettre en place à l'arrivée chez le client ?
+- Quels sont les livrables associés ?
+- Comment structurer une mission de 6 semaines ?
+
+**Livrables :**
+✅ **Présentation de cadrage** : 6 slides LaTeX/Beamer  
+✅ **Démarche méthodologique** : 3 phases structurées  
+✅ **POC technique** : Dataset 100% synthétique + prototype ML  
 
 ---
 
@@ -96,10 +101,12 @@
 ✅ **Analyse des enjeux métier** et cartographie use cases  
 ✅ **Architecture technique** et roadmap de déploiement  
 
-### 2. Techniques (Illustrations)
-✅ **Dataset synthétique** réaliste (10,000 clients, 40+ features)  
-✅ **Code d'analyse** (génération données + baseline ML)  
-✅ **Prototype de modèle** (Random Forest, F1-score ~70%)  
+### 2. Techniques (Illustrations POC)
+✅ **Dataset 100% synthétique** : 10,000 clients fictifs pour démonstration  
+✅ **Code d'analyse** : Génération données + baseline ML automatisé  
+✅ **Prototype fonctionnel** : Random Forest baseline (F1-score ~70%)  
+
+> **Note :** Le dataset est entièrement généré synthétiquement pour illustrer la faisabilité technique du cadrage, sans utiliser aucune donnée réelle.  
 
 ### 3. Exécutifs
 ✅ **Présentation de cadrage** (6 slides LaTeX/Beamer)  
@@ -225,21 +232,29 @@ case_study_banque/
 
 ---
 
-## � Dataset Synthétique (Illustration)
+## 💻 Dataset Synthétique & POC Technique
+
+> **Important :** Toutes les données sont **100% générées synthétiquement** pour ce POC. Aucune donnée bancaire réelle n'a été utilisée.
+
+### Objectif du Dataset Synthétique
+- **Démonstrer la faisabilité** technique des concepts de cadrage
+- **Valider les hypothèses** de corrélation comportementale 
+- **Servir d'exemple** pour les discussions avec les équipes métier
+- **Prototyper rapidement** sans contraintes RGPD/données sensibles
 
 ### Caractéristiques Générées
 
-**10,000 clients** avec **40+ features** réalistes :
+**10,000 clients fictifs** avec **40+ features** réalistes :
 
 - **Démographiques** : âge, genre, situation familiale, CSP, région
 - **Financières** : revenus, épargne, crédits en cours  
 - **Comportementales** : transactions, connexions app, visites agence
 - **Signaux prédictifs** : simulations prêts, consultations produits
 
-### Distribution des 8 Moments de Vie
+### Distribution des 8 Moments de Vie (Synthétiques)
 
-| Moment de Vie | Prévalence | Logique Métier |
-|--------------|------------|----------------|
+| Moment de Vie | Prévalence | Logique Métier Simulée |
+|--------------|------------|------------------------|
 | Mariage | ~3% | Pic 25-35 ans, corrélé revenus |
 | Naissance | ~4% | Post-mariage, âge 25-40 |
 | Achat immobilier | ~5% | Corrélé épargne + revenus stables |
