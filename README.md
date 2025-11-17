@@ -32,11 +32,11 @@ Ce projet propose une **démarche de cadrage structurée sur 6 semaines** pour p
 
 ### Livrables
 
-✅ **Dataset synthétique** : 10,000 clients avec 40+ features  
-✅ **Code d'analyse** : Génération + ML baseline  
-✅ **Présentation** : 6 slides LaTeX/Beamer  
-✅ **Démarche de cadrage** : 3 phases structurées  
-✅ **Modèle baseline** : Random Forest (F1-score ~70%)
+**Dataset synthétique** : 10,000 clients avec 40+ features  
+**Code d'analyse** : Génération + ML baseline  
+**Présentation** : 6 slides LaTeX/Beamer  
+**Démarche de cadrage** : 3 phases structurées  
+**Modèle baseline** : Random Forest (F1-score ~70%)
 
 ---
 
