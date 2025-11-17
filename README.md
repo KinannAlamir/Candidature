@@ -34,17 +34,6 @@
 - Quels sont les livrables associés ?
 - Comment structurer une mission de 6 semaines ?
 
-### 8 Moments de Vie Identifiés
-
-1. 💍 **Mariage / PACS** - Opportunité produits épargne couple
-2. 👶 **Naissance / Adoption** - Assurance vie, épargne enfant  
-3. 🏠 **Achat immobilier** - Crédit immobilier, assurance habitation
-4. 💼 **Changement d'emploi** - Négociation salaire, mobilité bancaire
-5. 🏖️ **Retraite** - Produits retraite, défiscalisation
-6. 💐 **Décès d'un proche** - Succession, réorganisation patrimoine
-7. 💔 **Divorce / Séparation** - Réorganisation comptes, crédit
-8. 🚀 **Création d'entreprise** - Compte pro, crédit professionnel
-
 **Enjeu métier :** Anticiper ces moments pour proposer des offres personnalisées au bon moment, augmentant la satisfaction client et les revenus.
 
 ---
