@@ -6,32 +6,6 @@
 
 Projet de data science pour prédire les moments de vie des clients bancaires et personnaliser les offres commerciales.
 
----
-
-## � Quick Start
-
-```bash
-# 1. Clone the repository
-git clone <repo-url>
-cd case_study_banque
-
-# 2. Install dependencies
-cd code
-pip install -r requirements.txt
-
-# 3. Launch Jupyter
-jupyter notebook
-
-# 4. Run notebooks in order:
-#    → 1_generation_donnees.ipynb
-#    → 2_analyse_exploratoire.ipynb
-#    → 3_resultats_concrets.ipynb
-```
-
-**Temps d'exécution total :** ~15 minutes
-
----
-
 ## 📊 Notebooks
 
 ### 1️⃣ Génération des Données (`1_generation_donnees.ipynb`)
@@ -63,25 +37,6 @@ jupyter notebook
 
 ---
 
-## 📁 Structure du Projet
-
-```
-case_study_banque/
-├── code/
-│   ├── 1_generation_donnees.ipynb       # Génération dataset synthétique
-│   ├── 2_analyse_exploratoire.ipynb     # Analyse et modèle baseline
-│   ├── 3_resultats_concrets.ipynb       # Résultats business
-│   └── requirements.txt                 # Dépendances Python
-├── data/                                 # Données générées (vide au départ)
-├── docs/                                 # Documentation détaillée
-├── presentation/                         # Présentation LaTeX
-│   ├── presentation_cadrage.pdf         # Slides finales
-│   └── presentation_cadrage.tex         # Source LaTeX
-└── README.md
-```
-
----
-
 ## 🎯 Résultats Attendus
 
 Après exécution complète des notebooks :
@@ -106,16 +61,6 @@ Après exécution complète des notebooks :
 
 ---
 
-## 🛠️ Technologies
-
-- **Python 3.8+** - Langage principal
-- **Pandas, NumPy** - Manipulation de données
-- **Scikit-learn** - Machine learning
-- **Matplotlib, Seaborn** - Visualisations
-- **Jupyter** - Notebooks interactifs
-
----
-
 ## 📚 Documentation
 
 - **`docs/HYPOTHESES_ET_METHODOLOGIE.md`** - Approche détaillée
@@ -130,8 +75,3 @@ Après exécution complète des notebooks :
 
 ---
 
-## � License
-
-MIT License - Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
