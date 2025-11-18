@@ -6,21 +6,21 @@
 
 Projet de data science pour prédire les moments de vie des clients bancaires et personnaliser les offres commerciales.
 
-## 📊 Notebooks
+## Notebooks
 
-### 1️⃣ Génération des Données (`1_generation_donnees.ipynb`)
+### Génération des Données (`1_generation_donnees.ipynb`)
 - Génération de 10,000 clients synthétiques
 - 8 moments de vie avec probabilités réalistes
 - Signaux comportementaux faibles
 - **Output :** `clients_data.csv`, `life_events.csv`
 
-### 2️⃣ Analyse Exploratoire (`2_analyse_exploratoire.ipynb`)
+### Analyse Exploratoire (`2_analyse_exploratoire.ipynb`)
 - Statistiques descriptives et corrélations
 - Visualisations multiples
 - Modèle baseline Random Forest
 - **Output :** Feature importance, visualisations
 
-### 3️⃣ Résultats Concrets (`3_resultats_concrets.ipynb`)
+### Résultats Concrets (`3_resultats_concrets.ipynb`)
 - Modèles pour tous les moments de vie
 - Scores de propension par client
 - Segmentation (Faible/Moyen/Élevé)
@@ -61,7 +61,7 @@ Après exécution complète des notebooks :
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **`docs/HYPOTHESES_ET_METHODOLOGIE.md`** - Approche détaillée
 - **`docs/LIVRABLES.md`** - Liste complète des livrables
