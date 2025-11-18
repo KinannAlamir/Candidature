@@ -18,6 +18,29 @@ lib64/
 parts/
 sdist/
 var/
+
+# Data files (generated)
+data/*.csv
+data/*.png
+data/*.txt
+!data/.gitkeep
+
+# LaTeX temporary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
 wheels/
 *.egg-info/
 .installed.cfg

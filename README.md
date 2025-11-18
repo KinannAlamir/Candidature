@@ -1,91 +1,137 @@
-# 🏦 Cadrage Data Science : Prédiction des Moments de Vie
+# 🏦 Prédiction des Moments de Vie - Data Science Case Study
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange)](https://jupyter.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![LaTeX](https://img.shields.io/badge/LaTeX-Beamer-orange)](https://www.latex-project.org/)
 
-**Case study :** Mission de cadrage data science (6 semaines) pour prédire les moments de vie des clients d'une banque française.
-
----
-
-## 📋 Contexte du Case Study
-
-**Mission :** Vous êtes sollicité pour intervenir sur le cadrage d'un cas d'usage data science visant à prédire des moments de vie des clients d'une banque française.
-
-**Questions à traiter :**
-- Quelle démarche de cadrage mettre en place à l'arrivée chez le client ?
-- Quels sont les livrables associés ?
-- Comment structurer une mission de 6 semaines ?
-
-**Livrable attendu :** Présentation PPT de 5-6 slides avec hypothèses de travail.
+Projet de data science pour prédire les moments de vie des clients bancaires et personnaliser les offres commerciales.
 
 ---
 
-## 🎯 Démarche de Cadrage Proposée
+## � Quick Start
 
-### Phase 1 : Compréhension Métier (S1-S2)
-- Ateliers avec équipes Marketing, Retail Banking, Crédits
-- Audit des données (CRM, transactions, comportements)
-- Identification des 8 moments de vie prioritaires
-- Définition des KPIs et métriques de succès
+```bash
+# 1. Clone the repository
+git clone <repo-url>
+cd case_study_banque
 
-### Phase 2 : Structuration Technique (S3-S4)
-- Architecture technique (ingestion, feature store, ML, API)
-- Feature engineering (100+ variables comportementales)
-- Sélection des algorithmes ML
-- Roadmap de déploiement sur 12 mois
+# 2. Install dependencies
+cd code
+pip install -r requirements.txt
 
-### Phase 3 : POC & Validation (S5-S6)
-- POC sur 1-2 moments de vie prioritaires
-- Tests et validation sur données historiques
-- Dashboard de monitoring
-- Présentation aux sponsors et recommandations
+# 3. Launch Jupyter
+jupyter notebook
+
+# 4. Run notebooks in order:
+#    → 1_generation_donnees.ipynb
+#    → 2_analyse_exploratoire.ipynb
+#    → 3_resultats_concrets.ipynb
+```
+
+**Temps d'exécution total :** ~15 minutes
 
 ---
 
-## 💡 8 Moments de Vie Identifiés
+## 📊 Notebooks
 
-💍 **Mariage/PACS** • 👶 **Naissance** • 🏠 **Achat immobilier** • 💼 **Changement emploi**  
+### 1️⃣ Génération des Données (`1_generation_donnees.ipynb`)
+- Génération de 10,000 clients synthétiques
+- 8 moments de vie avec probabilités réalistes
+- Signaux comportementaux faibles
+- **Output :** `clients_data.csv`, `life_events.csv`
+
+### 2️⃣ Analyse Exploratoire (`2_analyse_exploratoire.ipynb`)
+- Statistiques descriptives et corrélations
+- Visualisations multiples
+- Modèle baseline Random Forest
+- **Output :** Feature importance, visualisations
+
+### 3️⃣ Résultats Concrets (`3_resultats_concrets.ipynb`)
+- Modèles pour tous les moments de vie
+- Scores de propension par client
+- Segmentation (Faible/Moyen/Élevé)
+- Top 100 clients par événement
+- Recommandations business
+- **Output :** ~15 fichiers CSV + rapport consolidé
+
+---
+
+## 💡 8 Moments de Vie Prédits
+
+💍 **Mariage** • 👶 **Naissance** • 🏠 **Achat immobilier** • 💼 **Changement emploi**  
 🏖️ **Retraite** • 💐 **Décès proche** • 💔 **Divorce** • 🚀 **Création entreprise**
 
-**Hypothèses clés :**
-- Signaux comportementaux détectables 3-6 mois avant l'événement
-- Données CRM + transactionnelles suffisantes pour prédiction
-- Précision >70% atteignable pour top 3 événements
-- ROI positif avec 15% de conversion
-- Conformité RGPD totale
+---
+
+## 📁 Structure du Projet
+
+```
+case_study_banque/
+├── code/
+│   ├── 1_generation_donnees.ipynb       # Génération dataset synthétique
+│   ├── 2_analyse_exploratoire.ipynb     # Analyse et modèle baseline
+│   ├── 3_resultats_concrets.ipynb       # Résultats business
+│   └── requirements.txt                 # Dépendances Python
+├── data/                                 # Données générées (vide au départ)
+├── docs/                                 # Documentation détaillée
+├── presentation/                         # Présentation LaTeX
+│   ├── presentation_cadrage.pdf         # Slides finales
+│   └── presentation_cadrage.tex         # Source LaTeX
+└── README.md
+```
 
 ---
 
-## 📊 Contenu du Repository
+## 🎯 Résultats Attendus
 
-### 1. Présentation Exécutive (Livrable principal)
-📄 **\`presentation/presentation_cadrage.pdf\`** - 6 slides LaTeX/Beamer
-- Démarche de cadrage (3 phases, 6 semaines)
-- Architecture technique et roadmap
-- Hypothèses de travail documentées
-- ROI estimé sur top 3 use cases
+Après exécution complète des notebooks :
 
-### 2. POC Technique (Illustration)
-💻 **Dataset 100% synthétique** pour démonstration :
-- 10,000 clients fictifs générés
-- 40+ features réalistes
-- 8 moments de vie simulés
-- Prototype ML baseline (F1-score ~70%)
+### Données Générées
+- `clients_data.csv` - 10,000 clients avec 25+ features
+- `life_events.csv` - ~2,000 événements de vie
 
+### Résultats d'Analyse
+- Feature importance
+- Visualisations exploratoires
+- Performance modèle baseline (AUC ~0.75-0.85)
 
-> **Important :** Le code et les données sont purement illustratifs pour valider la faisabilité technique. Aucune donnée réelle utilisée.
+### Outputs Business
+- Scores de propension pour tous les clients
+- Segmentation par moment de vie
+- Top 100 clients prioritaires par événement
+- Recommandations d'actions commerciales
+- Rapport consolidé
+
+**Total : ~20 fichiers exploitables**
 
 ---
 
-## 💰 ROI Estimé
+## 🛠️ Technologies
 
-| Use Case | Volume/mois | ROI | Impact €/mois |
-|----------|-------------|-----|---------------|
-| 🏠 Achat Immobilier | 500 clients | +25% | €150-200K |
-| 🏖️ Retraite | 200 clients | +22% | €80-120K |
-| 👶 Naissance | 400 clients | +18% | €70-100K |
+- **Python 3.8+** - Langage principal
+- **Pandas, NumPy** - Manipulation de données
+- **Scikit-learn** - Machine learning
+- **Matplotlib, Seaborn** - Visualisations
+- **Jupyter** - Notebooks interactifs
 
-**Impact total :** €300-420K/mois de revenus additionnels estimés
+---
+
+## 📚 Documentation
+
+- **`docs/HYPOTHESES_ET_METHODOLOGIE.md`** - Approche détaillée
+- **`docs/LIVRABLES.md`** - Liste complète des livrables
+- **`INSTRUCTIONS.md`** - Contexte du case study
+
+---
+
+## ⚠️ Note Importante
+
+> Les données sont **100% synthétiques** et générées pour démonstration. Aucune donnée bancaire réelle n'est utilisée.
+
+---
+
+## � License
+
+MIT License - Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---

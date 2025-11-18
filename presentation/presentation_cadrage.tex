@@ -13,13 +13,14 @@
 \definecolor{wedRBlue}{RGB}{0, 102, 204}
 \definecolor{wedRGreen}{RGB}{0, 153, 76}
 \definecolor{wedRGray}{RGB}{100, 100, 100}
+\definecolor{wedRRed}{RGB}{204, 51, 0}
 
 \setbeamercolor{structure}{fg=wedRBlue}
 \setbeamercolor{frametitle}{bg=wedRBlue, fg=white}
 
 \title[Cadrage Data Science - Banque]{Cadrage d'un Cas d'Usage Data Science}
 \subtitle{Prédiction des Moments de Vie - Banque Française}
-\author{Consultant Data Science}
+\author{Kinann Al Amir}
 \date{Novembre 2025}
 \institute{Mission de 6 semaines}
 
@@ -68,14 +69,54 @@ Cadrer un projet de prédiction des moments de vie clients pour une banque fran�
 \vspace{0.3cm}
 
 \begin{center}
-\textbf{\textcolor{wedRGray}{Phase 3: Validation \& Pilote (S5-S6)}}\\
-POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
+\textbf{\textcolor{wedRRed}{Phase 3: Validation \& Recommandations (S5-S6)}}\\
+Évaluation de faisabilité + Recommandations stratégiques + Plan d'action
 \end{center}
 
 \end{frame}
 
 % ============================================================
-% SLIDE 3: PHASE 1 - COMPRÉHENSION MÉTIER
+% SLIDE 3: HYPOTHÈSES DE CADRAGE DU PROJET
+% ============================================================
+\begin{frame}{Hypothèses de Cadrage du Projet}
+
+\textbf{\large Hypothèses Méthodologiques}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item \textbf{H1 - Périmètre:} Focus sur \textbf{8 moments de vie} à fort impact business
+    \begin{itemize}
+        \item Mariage/PACS, Naissance, Achat immobilier, Changement d'emploi, Retraite, Décès proche, Divorce, Création entreprise
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{H2 - Prédictibilité:} Signaux comportementaux détectables \textbf{3-6 mois avant} l'événement
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{H3 - Données:} Données transactionnelles + CRM suffisantes pour modélisation
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{H4 - ROI:} Rentabilité avec un taux de conversion de \textbf{15\%} sur offres ciblées
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{H5 - Conformité:} Respect total du \textbf{RGPD} et éthique bancaire
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{block}{Approche de Validation}
+Ateliers de validation avec les parties prenantes métier + Tests de faisabilité technique
+\end{block}
+
+\end{frame}
+
+% ============================================================
+% SLIDE 4: PHASE 1 - COMPRÉHENSION MÉTIER
 % ============================================================
 \begin{frame}{Phase 1: Compréhension Métier (Semaines 1-2)}
 
@@ -113,106 +154,43 @@ POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
 \end{frame}
 
 % ============================================================
-% SLIDE 4: MOMENTS DE VIE & HYPOTHÈSES
+% SLIDE 5: PHASE 2 - STRUCTURATION & ROADMAP
 % ============================================================
-\begin{frame}{Moments de Vie Identifiés \& Hypothèses de Travail}
+\begin{frame}{Phase 2: Structuration \& Roadmap (S3-S4)}
+
+\textbf{\large Activités Clés}
+
+\vspace{0.3cm}
 
 \begin{columns}[T]
 \begin{column}{0.48\textwidth}
-\textbf{\textcolor{wedRBlue}{8 Moments de Vie Prioritaires}}
-\begin{enumerate}
-    \item Mariage / PACS
-    \item Naissance / Adoption
-    \item Achat immobilier
-    \item Changement d'emploi
-    \item Retraite
-    \item Décès d'un proche
-    \item Divorce / Séparation
-    \item Création d'entreprise
-\end{enumerate}
+\textbf{S3: Design \& Spécifications}
+\begin{itemize}
+    \item Définition des besoins fonctionnels détaillés
+    \item Identification des sources de données nécessaires
+    \item Évaluation des solutions techniques (cloud, outils ML)
+    \item Cartographie des risques et contraintes
+    \item Estimation budgétaire et ressources
+\end{itemize}
 \end{column}
 
 \begin{column}{0.48\textwidth}
-\textbf{\textcolor{wedRGreen}{Hypothèses Clés}}
+\textbf{S4: Roadmap \& Gouvernance}
 \begin{itemize}
-    \item \textbf{H1:} Signaux comportementaux 3-6 mois avant l'événement
-    \item \textbf{H2:} Données transactionnelles + CRM suffisantes
-    \item \textbf{H3:} Précision >70\% pour top 3 événements
-    \item \textbf{H4:} ROI positif avec 15\% de conversion
-    \item \textbf{H5:} Conformité RGPD totale
+    \item Roadmap de déploiement (12-18 mois)
+    \item Priorisation des moments de vie
+    \item Plan de gouvernance des données
+    \item Framework d'éthique IA
+    \item Organisation des équipes (rôles \& responsabilités)
 \end{itemize}
 \end{column}
 \end{columns}
 
 \vspace{0.4cm}
 
-\begin{block}{Dataset Synthétique Créé}
-\textbf{10,000 clients} - 40+ features (démographiques, financières, comportementales) - Horizon 12 mois
+\begin{block}{Livrables Phase 2}
+Document d'architecture technique + Roadmap détaillée + Plan de gouvernance
 \end{block}
-
-\end{frame}
-
-% ============================================================
-% SLIDE 5: PHASE 2 - ARCHITECTURE & ROADMAP
-% ============================================================
-\begin{frame}{Phase 2: Architecture Technique \& Roadmap (S3-S4)}
-
-\begin{columns}[T]
-\begin{column}{0.48\textwidth}
-\textbf{\large Architecture Proposée}
-
-\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
-% Data Sources
-\node[draw, rectangle, fill=wedRBlue!20, text width=3cm, align=center] at (0,4) {\textbf{Sources}\\CRM, Transactions\\Comportements};
-
-% Data Lake
-\node[draw, rectangle, fill=wedRGreen!20, text width=3cm, align=center] at (0,2.5) {\textbf{Data Lake}\\Azure/AWS\\RGPD-compliant};
-
-% ML Pipeline
-\node[draw, rectangle, fill=wedRBlue!20, text width=3cm, align=center] at (0,1) {\textbf{ML Pipeline}\\Feature Engineering\\Training/Scoring};
-
-% Activation
-\node[draw, rectangle, fill=wedRGreen!20, text width=3cm, align=center] at (0,-0.5) {\textbf{Activation}\\CRM, Conseillers\\Campagnes};
-
-% Arrows
-\draw[->, thick] (0,3.6) -- (0,3.0);
-\draw[->, thick] (0,2.0) -- (0,1.5);
-\draw[->, thick] (0,0.5) -- (0,0);
-\end{tikzpicture}
-
-\end{column}
-
-\begin{column}{0.48\textwidth}
-\textbf{\large Roadmap Détaillée}
-
-\vspace{0.2cm}
-
-\textbf{S3: Architecture \& Features}
-\begin{itemize}
-    \item Design technique détaillé
-    \item Feature engineering (100+ features)
-    \item Sélection des algorithmes
-\end{itemize}
-
-\vspace{0.2cm}
-
-\textbf{S4: Développement POC}
-\begin{itemize}
-    \item Pipeline data (Airflow/Databricks)
-    \item Modèles ML (XGBoost, LightGBM)
-    \item Dashboard de monitoring
-\end{itemize}
-
-\vspace{0.2cm}
-
-\textbf{Ressources Nécessaires}
-\begin{itemize}
-    \item 2 Data Scientists
-    \item 1 Data Engineer
-    \item 1 Product Owner métier
-\end{itemize}
-\end{column}
-\end{columns}
 
 \end{frame}
 
@@ -242,14 +220,14 @@ POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
         \item Budget \& timeline
     \end{itemize}
     
-    \item \textbf{POC fonctionnel} (S6)
+    \item \textbf{Rapport de faisabilité} (S6)
     \begin{itemize}
-        \item Code source (GitHub)
-        \item Modèles entraînés
-        \item Dashboard de résultats
+        \item Évaluation technique et métier
+        \item Analyse risques/opportunités
+        \item Plan d'action priorisant
     \end{itemize}
     
-    \item \textbf{Recommandations stratégiques}
+    \item \textbf{Recommandations stratégiques} (S6)
     \begin{itemize}
         \item Plan de déploiement
         \item Quick wins identifiés
@@ -288,11 +266,12 @@ POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
 
 \vspace{0.3cm}
 
-\textbf{\textcolor{wedRBlue}{Success Metrics}}
+\textbf{\textcolor{wedRBlue}{Critères de Succès}}
 \begin{itemize}
-    \item Précision modèle: >70\%
-    \item Taux conversion: +15-25\%
-    \item Satisfaction client: +10pts
+    \item Clarté du cadrage et adhésion métier
+    \item Roadmap réaliste et budgétisée
+    \item Quick wins actionnables
+    \item Conformité RGPD validée
 \end{itemize}
 
 \end{column}
@@ -314,8 +293,8 @@ POC sur 1-2 moments de vie prioritaires + Recommandations stratégiques
 
 \vspace{1cm}
 
-\textit{Dataset synthétique \& code disponibles}\\
-\texttt{github.com/case\_study\_banque}
+\textit{Dataset synthétique \& code d'un POC disponibles}\\
+\texttt{https://github.com/KinannAlamir/Candidature}
 
 \vspace{0.5cm}
 
